@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Human Dialog Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .players-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        #player1, #player2 {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #000;
+            position: relative;
+        }
+        
+        #bgText {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.5;
+            min-height: 100px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .status {
+            text-align: center;
+            margin: 10px 0;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Human Dialog Demo</h1>
+        
+        <div class="players-container">
+            <div id="player1"></div>
+            <div id="player2"></div>
+        </div>
+        
+        <div id="bgText">
+            Welcome to the AI Human Dialog Demo! Click "Start Dialogue" to begin the conversation between two AI players.
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" onclick="runDialogue()">Start Dialogue</button>
+        </div>
+        
+        <div class="status" id="status">
+            Ready to start...
+        </div>
+    </div>
+
+    <!-- DeepBrain AI Web SDK -->
+    <script src="https://cdn-aihuman.deepbrainai.io/sdk/web-sdk.js"></script>
+    
+    <!-- Local dialog script -->
+    <script src="dialog.js"></script>
+</body>
+</html>
