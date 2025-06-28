@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AI Human Dialog Demo</title>
+  <style>
+    #bgText {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #333;
+      z-index: 0;
+    }
+    #player1, #player2 {
+      position: absolute;
+      bottom: 5%;
+      width: 30%;
+      height: 50%;
+      z-index: 1;
+    }
+    #player1 { left: 5%; }
+    #player2 { right: 5%; }
+  </style>
+</head>
+<body>
+  <div id="bgText">Loading...</div>
+  <div id="player1"></div>
+  <div id="player2"></div>
+
+  <script src="https://cdn-aihuman.deepbrainai.io/sdk/web/aiPlayer-1.5.2.min.js"></script>
+  <script src="/dialog.js"></script>
+</body>
+</html>
